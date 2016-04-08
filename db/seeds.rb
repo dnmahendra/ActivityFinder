@@ -16,24 +16,24 @@
     location = Faker::Address.city
     User.create!(name: name,
                 email: email,
-                password_digest: password,
+                password: password,
                 gender: gender,
                 age: age,
                 avatar: avatar,
                 location: location)
 end
 
-# 15.times do |n|
-#     title =  Faker::Team.sport 
-#     description =  Faker::Hipster.paragraph 
-#     location = Faker::Address.city
-#     begins = Faker::Date.forward(30)
-#     user_id  = Faker::Number.between(1, 10)
-#     Activity.create!(title: title, 
-#                  description: description,
-#                  location: location, 
-#                  begins: begins,
-#                  user_id: user_id)
-#    end 
+15.times do |n|
+    title =  Faker::Team.sport 
+    description =  Faker::Hipster.paragraph 
+    location = Faker::Address.city
+    begins = Faker::Date.forward(30)
+    user_id  = Faker::Number.between(1, 10)
+    Activity.create!(title: title, 
+                 description: description,
+                 location: location, 
+                 begins: begins,
+                 user_id: user_id)
+   end 
 
 
