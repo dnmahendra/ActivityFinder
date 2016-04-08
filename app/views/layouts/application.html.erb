@@ -3,10 +3,31 @@
 <head>
   <title>ActivityFinder</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB12mD0AKu8-GBFWRFN3EQOUWxoUShIs6Q&libraries=places"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+
+<nav>
+  <div class="nav_wrapper">
+    <a href="#" class="brand-logo">ActivityFinder</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if logged_in? %>
+        <li><%= link_to "Host Activity", "#modal-activity", class: "modal-trigger" %></li>
+        <li><%= link_to "Sign Up", "#modal-signup", class: "modal-trigger" %></li>
+        <li><div class="chip"><img src="<%= current_user.avatar %>" id="main_avatar"><%= current_user.name %></div></li>
+        <li><%= link_to "Sign out", logout_path %></li>
+      <% else %>
+        <li><%= link_to "Sign In", "#modal-signin", class: "waves-effect waves-light btn modal-trigger" %></li>
+        <li><%= link_to "Sign Up", "#modal-signup", class: "waves-effect waves-light btn modal-trigger" %></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
 
 <%= yield %>
 

@@ -12,5 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require materialize-sprockets
 //= require turbolinks
-//= require_tree .
+//= require underscore
+//= require backbone
+//= require mustache
+//= require activity_model
+//= require activity_collection
+//= require ActivityItemView
+//= require indexview
+//= require router
+//= require app
+

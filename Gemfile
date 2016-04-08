@@ -40,7 +40,11 @@ gem 'geocoder'
 
 gem 'rack-cors', :require => 'rack/cors'
 
-gem 'ratyrate'
+# gem 'ratyrate'
+
+gem 'materialize-sass'
+
+gem 'faker'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

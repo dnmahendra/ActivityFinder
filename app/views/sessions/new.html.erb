@@ -1,0 +1,37 @@
+
+
+<div class="modal" id="modal-signin">
+  <div class="modal-content">
+  <div class="header">
+    <h1 class="grow">Activity Finder</h1>
+  </div>
+    <div class="lb-header">
+      <a href="#" class="active" id="login-box-link">Login</a>
+    </div>
+    <div class="social-login">
+      <a href="/auth/facebook">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login in with facebook
+      </a>
+    </div>
+    <form role="form" action="/sessions" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="name" placeholder="UserName or Email" name="name"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="password" placeholder="Password" name="password"/>
+        </div>
+      </div>
+      <div class="u-form-group">
+        <button>Log in</button>
+      </div>
+      <div class="u-form-group">
+        <a href="/users/new" class="forgot-password"> - -  First time? Click here to sign up.  - - </a>
+      </div>
+    </form>
+  </div>
+</div>

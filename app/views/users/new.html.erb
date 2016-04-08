@@ -1,0 +1,56 @@
+<div id="modal-signup" class="modal">
+  <div class="modal-content">
+    <form class="col s12" role="form" action="/users" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="row">
+        <div class="input-field col s12">
+            <label for="">Username:</label>
+            <input type="text" placeholder="BlackHorse559" name="user[name]">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12"> 
+            <label for="">Email:</label>
+            <input type="text" placeholder="example@freemail.com" name="user[email]">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12"> 
+            <label for="">Password:</label>
+            <input type="password" placeholder="Please don't use abcd1234" name="user[password]">
+        </div>
+      </div>
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Avatar</span>
+          <input type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="">Location:</label>
+          <input type="text" placeholder="enter a location" name="user[location]">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="">Age:</label>
+          <input type="number" name="user[age]" min="10" max="120">
+        </div>
+      </div>
+      <div class="input-field col s12">
+        <label for="">Gender:</label>
+        <input name="user[gender]" type="radio" value="male" checked>
+        <input name="user[gender]" type="radio" value="female">
+        <input name="user[gender]" type="radio" value="other">
+      </div>
+
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+
+<%= render "shared/forms" %>
+
+<main>
+  
+</main>
+
+<script id="index-template" type="text/x-underscore-template">
+<div class="split">
+  <div class="activities">
+    <div class="card-container">
+      
+    </div>
+  </div>
+
+  <div class="map">
+  </div>
+</div>
+</script>
+
+<script id="activity-template" type="text/x-underscore-template">
+<!-- // Please link title anchor to show single page -->
+    <div class="card">
+      <h4 class="title"><a href="">{{ title }}</a></h4>
+      <div class="card-image">
+        <img class="user-pic" src="{{ user.avatar }}" alt="">
+        <span class="card-title">Hosted by: {{ user.name }}</span>
+      </div>
+      <div class="card-content">
+        <p class="location">{{ location }}</p>
+        <p class="date">{{ start }}</p>
+        <p class="description">{{ description }}</p>
+      </div>
+    </div>
+</script>

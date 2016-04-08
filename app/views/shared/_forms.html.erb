@@ -1,0 +1,150 @@
+
+<!-- modal signup -->
+<div id="modal-signup" class="modal">
+  <div class="modal-content">
+    <form class="col s12" role="form" action="/users" method="post">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="row">
+        <div class="input-field col s12">
+            <label for="">Username:</label>
+            <input type="text" placeholder="BlackHorse559" name="user[name]">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12"> 
+            <label for="">Email:</label>
+            <input type="text" placeholder="example@freemail.com" name="user[email]">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12"> 
+            <label for="">Password:</label>
+            <input type="password" placeholder="Please don't use abcd1234" name="user[password]">
+        </div>
+      </div>
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Avatar</span>
+          <input type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="">Location:</label>
+          <input type="text" placeholder="enter a location" name="user[location]">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="">Age:</label>
+          <input type="number" name="user[age]" min="10" max="120">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="">Gender:</label>
+          <p>
+            <input name="user[gender]" type="radio" id="male" value="male" checked>
+            <label for="male">male</label>
+          </p>
+          <p>
+            <input name="user[gender]" type="radio" id="female" value="female">
+            <label for="female">female</label>
+          </p>
+          <p>
+            <input name="user[gender]" type="radio" id="other" value="other">
+            <label for="other">other</label>
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <a href="#!" class="btn modal-action modal-close waves-effect waves-green">Close</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- modal signin -->
+
+<div class="modal" id="modal-signin">
+  <div class="modal-content">
+    <div class="social-login">
+      <a href="/auth/facebook">
+        <i class="fa fa-facebook fa-lg"></i>
+        Login with facebook
+      </a>
+    </div>
+    <form role="form" action="/sessions" method="post">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <div class="row">
+        <div class="input-field col s12">
+          <input type="text" placeholder="UserName or Email" name="name"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" class="validate" type="password" placeholder="Password" name="password"/>
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Log In
+          <i class="material-icons right">vpn_key</i>
+        </button>
+      </div>
+    </form>
+  </div>
+      <div class="modal-footer">
+        <a href="#modal-signup" class="modal-trigger forgot-password"> - -  First time? Click here to sign up.  - - </a>
+      </div>
+</div>
+
+<!-- create an activity -->
+<div class="modal" id="modal-activity">
+    <form action="/activities" method="post" class="form-wrapper">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="title">Activity:</label>
+        <input type="text" name="title" placeholder="Give a brief description of the activity">
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="">Date:</label>
+        <input type="date" class="datepicker" placeholder="" name="date">
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="location">Location:</label>
+        <input id="place-input" type="text" name="location" placeholder="Where is the activity?">
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <label for="description">Details:</label>
+        <textarea name="description" class="form-control" rows="10"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Create
+        <i class="material-icons right">send</i>
+      </button>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green">Close</a>
+    </div>
+    </form>
+</div>
+
+
+
