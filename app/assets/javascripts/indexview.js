@@ -21,6 +21,7 @@ var IndexView = Backbone.View.extend({
 
     var latLngList = [];
     this.collection.each(function(activity) {
+      activity = activity.toJSON();
         if (activity.latitude != null) {
           console.log(activity);
           latLngList.push(new google.maps.LatLng(activity.latitude, activity.longitude));
